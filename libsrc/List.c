@@ -212,6 +212,27 @@ struct node* search(const struct list *list, const void *obj)
 
 void reverseList(struct list *list)
 {
+if(list == NULL){
+    return;
+  }
+else{
+  struct node *tmp = list -> head;
+  structnode * tmp2, *theTail;
+
+  while(tmp != NULL){
+    tmp2 = tmp -> next;
+    tmp -> next = tmp -> prev;
+    tmp -> prev = tmp2;
+    tmp = tmp2;
+  }
+  theTail = L -> tail;
+  L -> tail = L -> head;
+  L -> head = theTail;
+}
+
+
+
+
 }
 
 void printList(const struct list *list)
