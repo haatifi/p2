@@ -191,7 +191,23 @@ struct node* removeNode(struct list *list, struct node *node)
 
 struct node* search(const struct list *list, const void *obj)
 {
-	return NULL;
+	  if(list == NULL || isEmpty(list))
+        {
+                return NULL;
+        }else{
+                struct node * temp= list->head;
+                while(temp!= NULL){
+                        if((list->equals (temp -> obj, obj)) == 0){
+                                return temp;
+                        }else{
+                                temp = temp -> next;
+                        }
+
+                } return NULL;
+        }
+
+
+
 }
 
 void reverseList(struct list *list)
