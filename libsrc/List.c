@@ -217,7 +217,7 @@ if(list == NULL){
   }
 else{
   struct node *tmp = list -> head;
-  structnode * tmp2, *theTail;
+  struct node * tmp2, *theTail;
 
   while(tmp != NULL){
     tmp2 = tmp -> next;
@@ -225,13 +225,10 @@ else{
     tmp -> prev = tmp2;
     tmp = tmp2;
   }
-  theTail = L -> tail;
-  L -> tail = L -> head;
-  L -> head = theTail;
+  theTail = list -> tail;
+  list -> tail = list -> head;
+  list -> head = theTail;
 }
-
-
-
 
 }
 
