@@ -85,35 +85,34 @@ void addAtFront(struct list *list, struct node *node)
 		list->head = node;
 	}
 }
-
+I
 void addAtRear(struct list *list, struct node *node)
 {
-		if(list == NULL )return;
-		if(node == NULL) return;
-		list->size++;
-		
-	      if(list -> size == NULL)
-	  {	
-		assert(list->head==NULL);
-		assert(list->tail==NULL);
-		list -> head = node;
-		list->tail=node;
+	 if(list == NULL || node == NULL){
+                 return;
+          }else if(list -> size == 0)
+          {
+                assert(list->head==NULL);
+                assert(list->tail==NULL);
+                list -> head = node;
+                list->tail=node;
 
-  	  }
- 		else 
-		{
-		list->tail -> next = node;
+          }
+                else
+                {
+                list->tail -> next = node;
 
-   		node -> prev = list-> tail;
+                node -> prev = list-> tail;
 
-        	list -> tail = node;	 
-		node->next=NULL;
-		}	
-	
-	list -> size++;
-	return;
-  
-  
+                list -> tail = node;
+                node->next=NULL;
+                }
+
+        list -> size++;
+        return;
+
+		  
+ 
 }
 
 struct node* removeFront(struct list *list)
