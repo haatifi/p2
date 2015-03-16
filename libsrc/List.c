@@ -3,7 +3,9 @@
 #include <stdlib.h>
 #include "List.h"
 /* 2015: Huma Aatifi
- * *
+ * * List.c implements List.h creating all 
+ * the functions which are needed to handle 
+ * nodes inside a list
  *
  *
  */
@@ -33,7 +35,7 @@ void freeList(struct list *list)
 	}
 	
 	struct node *current = list->head;
-	
+	//goes through list until all nodes have been freed	
 	while(current != NULL)
 	{
 	  struct node *nextNode = current->next;
@@ -85,7 +87,7 @@ void addAtFront(struct list *list, struct node *node)
 		list->head = node;
 	}
 }
-I
+
 void addAtRear(struct list *list, struct node *node)
 {
 	 if(list == NULL || node == NULL){
@@ -129,6 +131,7 @@ struct node* removeFront(struct list *list)
                         list -> head -> prev = NULL;
 
                 }
+		//set the pointer after and before to NULL
                 temp->prev = NULL;
                 temp->next = NULL;
                 list->size--;
