@@ -149,7 +149,7 @@ struct node* removeRear(struct list *list)
            {
                 struct node  *temp = list->tail;
                 if(list->size ==1){
-
+	//one node case
         list->tail=list->head=NULL;
                 }else{
 
