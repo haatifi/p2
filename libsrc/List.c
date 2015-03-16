@@ -2,8 +2,10 @@
 #include<assert.h>
 #include <stdlib.h>
 #include "List.h"
-/* 2015: Huma Aatii
+/* 2015: Huma Aatifi
  * *
+ *
+ *
  */
 
 struct list * createList(int (*equals)(const void *,const void *),
